@@ -246,8 +246,8 @@ b {
     grid-gap: 20px;
     grid-template-areas: 
     "gallery-h2 gallery-h2 gallery-h2"
-    "img2 img4 img8"
-    "img3 img10 img13";
+    "img1 img2 img3"
+    "img4 img5 img6";
 }
 
 #photo-gallery .gallery-img {
@@ -271,9 +271,9 @@ b {
         grid-gap: 20px;
         grid-template-areas: 
         "gallery-h2 gallery-h2"
-        "img2 img4"
-        "img8 img3"
-        "img10 img13";
+        "img1 img2"
+        "img3 img4"
+        "img5 img6";
     }
 
     #photo-gallery .gallery-img {
@@ -295,12 +295,12 @@ b {
         grid-gap: 20px;
         grid-template-areas: 
         "gallery-h2"
+        "img1"
         "img2"
-        "img4"
-        "img8"
         "img3"
-        "img10"
-        "img13";
+        "img4"
+        "img5"
+        "img6";
     }
 
     #photo-gallery .gallery-img {
@@ -321,6 +321,11 @@ b {
     letter-spacing: 1px;
 }
 
+#photo-gallery .img1{
+    grid-area: img1;
+    background-image: url("../images/Pic1.jpg");
+}
+
 #photo-gallery .img2{
     grid-area: img2;
     background-image: url("../images/Pic2.jpg");
@@ -333,22 +338,17 @@ b {
 
 #photo-gallery .img4{
     grid-area: img4;
-    background-image: url("../images/Pic4.jpg");
+    background-image: url("../images/Pic4.JPG");
 }
 
-#photo-gallery .img8{
-    grid-area: img8;
-    background-image: url("../images/Pic8.JPG");
+#photo-gallery .img5{
+    grid-area: img5;
+    background-image: url("../images/Pic5.jpg");
 }
 
-#photo-gallery .img10{
-    grid-area: img10;
-    background-image: url("../images/Pic10.jpg");
-}
-
-#photo-gallery .img13{
-    grid-area: img13;
-    background-image: url("../images/Pic13.jpg");
+#photo-gallery .img6{
+    grid-area: img6;
+    background-image: url("../images/Pic6.jpg");
 }
 
 /* Gallery img titles */
@@ -392,6 +392,26 @@ b {
 .img-window img {
     max-height: 80vh;
     max-width: 80vw;
+}
+
+/* Next image button */
+.img-btn-next, .img-btn-prev {
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    position: fixed;
+    top: 48vh;
+    z-index: 500;
+    background-color: #e2d3c4;
+    color: #eaeae7;
+    cursor: pointer;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+.img-btn-next:hover, .img-btn-prev:hover {
+    opacity: 0.6;
+    color: grey;
 }
 
 
