@@ -9,9 +9,11 @@ body {
     background-color: #eaeae7;
 }
 
-.navBar{
+.navBar {
     background-color: #e2d3c4;
     padding: 5px;
+    overflow: hidden;
+    width: 100%;
 }
 
 nav {
@@ -69,7 +71,6 @@ nav {
 
 .circular-img-div {
     position: relative;
-    overflow: hidden;
     width: 20vw;
     height: auto;
     margin-left: 18vw;
@@ -150,18 +151,65 @@ b {
 }
 
 @media screen and (max-width: 1024px) {
+    .img-container {
+        display: flex;
+    }
     .nav-links{
         width: 100%;
+    }
+    .circular-img-div {
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        margin-top: 5vh;
+        z-index: -99;
+        align-items: center;
+    }
+    div {
+        align-items: center;
+        display: block;
     }
 }
 
 @media screen and (max-width:768px) {
+    .container-fluid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img-container{
+        display: block;
+    }
+
+    div {
+        align-items: center;
+        display: block;
+    }
+
+    .circular-img-div .circular-img{
+        width: 80vw;
+        margin: auto;
+    }
+
+    .circular-img-div {
+        display:flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin: auto;
+        margin-top: 5vh;
+        z-index: -99;
+        align-items: center;
+    }
+
     body {
         overflow-x: hidden;
     }
 
     nav {
         min-height: 7vh;
+        overflow: hidden;
     }
 
     .h4, h4 {
@@ -169,8 +217,12 @@ b {
         letter-spacing: 10px;
     }
 
+    .navBar {
+        overflow: hidden;
+    }
+
     .nav-links {
-        position: absolute;
+        position: fixed;
         right: 0px;
         height: 15vh;
         top: 8vh;
@@ -181,6 +233,7 @@ b {
         width: 100%;
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
+        overflow-x: hidden;
     }
     .nav-links li {
         opacity: 0;
@@ -188,19 +241,35 @@ b {
     .burger {
         display: block;
     }
-
-    .circular-img-div {
-        width: 30vw;
-        float: none;
-        display: block;
-        margin: 140px auto 40px 28vw;
-    }
     
     .title-text {
         float: none;
-        display: block;
-        margin: 20px auto 20px 28vw;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 45vh;
         font-size: 13px;
+        align-items: center;
+        width: auto;
+    }
+
+    .title-text h2{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-items: center;
+        text-align: center;
+        font-size: 28px;
+    }
+
+    .title-text h3{
+        text-align: center;
+        font-size: 13px;
+    }
+
+    .title-text p{
+        text-align: center;
+        font-size: 10px;
     }
 
     .title-work, .title-facts {
@@ -591,16 +660,25 @@ b {
 
     .slide .info{
         padding: 10px 25px;
+        margin: 0;
     }
 
     .slide .info h2{
         font-size: 35px;
         width: 90%;
+        margin-bottom: 0;
     }
 
-    .slide .info p{
-        width: 70%;
-        font-size: 15px;
+    .slide .info .para {
+        margin-top: 5%;
+    }
+
+    .slide .info .para p{
+        width: 90%;
+        line-height: normal;
+        font-size: 10px;
+        margin-top: 0;
+        text-align: center;
     }
 
     .slides .nav-slider{
